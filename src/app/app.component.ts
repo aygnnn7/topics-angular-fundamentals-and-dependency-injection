@@ -4,7 +4,30 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   
   template: `
-    <!-- <h1>ngFor</h1>
+      <div appExample color="green">
+        Hello
+      </div>
+      <div appExample color="blue">
+        Hello
+      </div>
+
+    <!-- Data Bindings
+    Text Interpolation
+    <h1>{{title}}</h1>
+  
+    Property Binding
+    <input type="text" [placeholder]="title">
+    <app-home [pageName]=""></app-home>
+    
+    Two-Way Data Binding
+    <p> Two-Way </p>
+    <input type="text" [(ngModel)]="name">
+    <hr>
+    <p>{{name}}
+  
+    
+    Directives
+    <h1>ngFor</h1>
     <ul>
       <li *ngFor="let name of names; 
       index as i; 
@@ -26,30 +49,16 @@ import { Component } from '@angular/core';
         <div *ngSwitchCase="1">Number is 1</div>
         <div *ngSwitchCase="2">Number is 2</div>
         <div *ngSwitchDefault>None of them</div>
-    </div> -->
+    </div> 
     <hr>
     <h1>ngClass</h1>
     <p [ngClass]="c1">Styled with ngClass</p>
     <hr>
     <h1>ngStyle</h1>
     <p [ngStyle]="s1">Styled with ngStyle</p>
+    -->
   `,
 
-  /* Data Bindings
-  template: `
-  Text Interpolation
-  <h1>{{title}}</h1>
- 
-  Property Binding
-  <input type="text" [placeholder]="title">
-  <app-home [pageName]=""></app-home>
-  
-  Two-Way Data Binding
-  <p> Two-Way </p>
-  <input type="text" [(ngModel)]="name">
-  <hr>
-  <p>{{name}}
-  `,*/
   styles: [".myclass{color:red;}"]
 })
 export class AppComponent {
