@@ -122,4 +122,12 @@
   - `ngModel`: Facilitates two-way data binding operations in form objects.
   - `ngNonBindable`: Disables the effect of the Text Interpolation operator.
 
+### Structural Directives
+ - A type of directive that allows us to make changes on the page by physically manipulating the HTML object and the DOM structure. 
+ - Structural directives are called with the * character.
+ - Structural directives can physically change the structure of the template by altering the appearance of DOM elements in the HTML template.
+ - Normal directives do not change the appearance of DOM elements in the HTML template; they only add extra features. 
+ - TemplateRef represents the template used by the directive. 
+ - ViewContainerRef is a reference to the container that holds the content of a template in Angular. This container is used to dynamically add or remove HTML elements.
+
 ---
