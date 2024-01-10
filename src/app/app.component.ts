@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   template: `
 
 
-    {{name | slice : 1 : 4}}
-    <hr>
-    {{"dummy text" | custom : 0 : 5}}
+   
     
     <!-- Data Bindings
     Text Interpolation
@@ -23,7 +21,6 @@ import { Component } from '@angular/core';
     <input type="text" [(ngModel)]="name">
     <hr>
     <p>{{name}}
-  
     
     Directives
     <h1>ngFor</h1>
@@ -74,7 +71,14 @@ import { Component } from '@angular/core';
     </ul> 
     <ul>
       <li *appCustomfor="names; let name; let i = index"> {{name}} - {{i}}</li>
-    </ul>-->
+    </ul>
+
+    Pipes
+   {{name | slice : 1 : 4}}
+    <hr>
+    {{"dummy text" | custom : 0 : 5}}
+  -->
+    
     
   `,
 
