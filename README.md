@@ -84,7 +84,7 @@
 
 ---
 
-## Data Binding Behavior
+### Data Binding Behavior
 - In Angular, the concept of Binding refers to the live connection established between a model or function in the Component Class and an element or DOM object in the template.
 
 ### Types of Data Binding
