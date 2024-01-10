@@ -2,15 +2,19 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  
-  template: `
-      <div appExample color="green">
-        Hello
-      </div>
-      <div appExample color="blue">
-        Hello
-      </div>
 
+  template: `
+    <h1>Custom If</h1>
+    <div *appCustomif="true"> Hello </div>
+    <hr>
+    <h1>Custom For</h1>
+    <!-- <ul>
+      <li *appCustomfor="5; let i = index; let e = text">YGN - {{i}} - {{e}}</li>
+    </ul> -->
+    <ul>
+      <li *appCustomfor="names; let name; let i = index"> {{name}} - {{i}}</li>
+    </ul>
+    
     <!-- Data Bindings
     Text Interpolation
     <h1>{{title}}</h1>
@@ -56,13 +60,21 @@ import { Component } from '@angular/core';
     <hr>
     <h1>ngStyle</h1>
     <p [ngStyle]="s1">Styled with ngStyle</p>
+
+    Directive
+        <div appExample color="green">
+        Hello
+      </div>
+      <div appExample color="blue">
+        Hello
+      </div>
     -->
   `,
 
   styles: [".myclass{color:red;}"]
 })
 export class AppComponent {
-  names:string[] = ["John", "Jack", "Isabel", "Anna"];
+  names: string[] = ["John", "Jack", "Isabelle", "Anna"];
   visible: boolean = false;
   num: number = 1;
   c1: string = "myclass";
@@ -71,4 +83,5 @@ export class AppComponent {
     'color': 'white',
     'font-size': '12px'
   }
+  
 }

@@ -6,10 +6,9 @@ declare var $:any;
   selector: '[appExample]'
 })
 export class ExampleDirective implements OnInit{
- constructor(private element:ElementRef) {  
-    
-    
-  }
+  constructor(private element:ElementRef) { }
+
+
   ngOnInit(): void {
     this.element.nativeElement.style.backgroundColor=this.color;
     $(this.element.nativeElement).fadeOut(2000).fadeIn(2000);
@@ -24,6 +23,6 @@ export class ExampleDirective implements OnInit{
   }
   
   @HostBinding("style.color") writingColor:string = "orange";
-
+  
 
 }
