@@ -4,16 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-root',
 
   template: `
-    <h1>Custom If</h1>
-    <div *appCustomif="true"> Hello </div>
+
+
+    {{name | slice : 1 : 4}}
     <hr>
-    <h1>Custom For</h1>
-    <!-- <ul>
-      <li *appCustomfor="5; let i = index; let e = text">YGN - {{i}} - {{e}}</li>
-    </ul> -->
-    <ul>
-      <li *appCustomfor="names; let name; let i = index"> {{name}} - {{i}}</li>
-    </ul>
+    {{"dummy text" | custom : 0 : 5}}
     
     <!-- Data Bindings
     Text Interpolation
@@ -68,7 +63,19 @@ import { Component } from '@angular/core';
       <div appExample color="blue">
         Hello
       </div>
-    -->
+
+    Custom Directives
+    <h1>Custom If</h1>
+    <div *appCustomif="true"> Hello </div>
+    <hr>
+    <h1>Custom For</h1>
+    <ul>
+      <li *appCustomfor="5; let i = index; let e = text">YGN - {{i}} - {{e}}</li>
+    </ul> 
+    <ul>
+      <li *appCustomfor="names; let name; let i = index"> {{name}} - {{i}}</li>
+    </ul>-->
+    
   `,
 
   styles: [".myclass{color:red;}"]
@@ -83,5 +90,5 @@ export class AppComponent {
     'color': 'white',
     'font-size': '12px'
   }
-  
+  name: string = "Aygyun"; 
 }
