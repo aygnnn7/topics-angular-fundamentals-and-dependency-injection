@@ -132,8 +132,6 @@
 
 ---
 
-Here's your text translated into English without changing the format:
-
 ### What is a Pipe?
 - A structure specific to Angular used to change the way data is displayed.
 - Built-in pipes:
