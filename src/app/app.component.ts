@@ -4,10 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-root',
 
   template: `
-
-
-   
+    <app-parent></app-parent>
+    <hr>
+    <app-parent2></app-parent2>
+    <hr>
+    <app-comp-a (data)="childData($event)"></app-comp-a>
+    <app-comp-b [data]="childAtoBMessage"><app-comp-b> 
     
+
     <!-- Data Bindings
     Text Interpolation
     <h1>{{title}}</h1>
@@ -95,4 +99,9 @@ export class AppComponent {
     'font-size': '12px'
   }
   name: string = "Aygyun"; 
+
+  childAtoBMessage:string;
+  childData(message:string){
+    this.childAtoBMessage=message;
+  }
 }

@@ -131,3 +131,31 @@
  - ViewContainerRef is a reference to the container that holds the content of a template in Angular. This container is used to dynamically add or remove HTML elements.
 
 ---
+
+Here's your text translated into English without changing the format:
+
+### What is a Pipe?
+- A structure specific to Angular used to change the way data is displayed.
+- Built-in pipes:
+	- Currency Pipe: Converts numerical values to a monetary format. (Uses the application's default currency)
+	- DatePipe: Formats date values.
+	- SlicePipe: Allows access to certain ranges in arrays.
+	- JsonPipe: Converts an object to JSON format.
+	- UpperCasePipe: Converts textual values entirely to uppercase.
+	- LowerCasePipe: Converts textual values entirely to lowercase.
+	- TitleCasePipe: Capitalizes the first letter of each word in the text.
+	- KeyValuePipe: Allows access to both the key and value of data in Key-Value format.
+	- PercentPipe: Formats numerical values as percentages.
+	- and others.
+- A pipe can be created via the terminal instruction "ng g p ...".
+- The name of a pipe class should conventionally include 'Pipe'.
+- A pipe must implement PipeTransform.
+- A pipe must be declared with @Pipe and named using name: 'x'.
+- The 'transform' function in a pipe is the function that manipulates/transforms the value used by the pipe.
+- The 'transform' function's value parameter gives us the value we are working on, while args provide us the parameters we are working with. Alternatively, we can define parameters ourselves like a:number, b:string.
+
+--- 
+### What is Angular Component Communication?
+- Angular Component Communication is a concept that refers to the processes of sharing data and events between Angular components.
+- Parent to Child Communication - The method used to send data from a parent component to a child component. Here, the input method is used.
+- Child to Parent Communication - The method used to send data from a child component to a parent component. Here, the output method is used.
