@@ -84,7 +84,7 @@
 
 ---
 
-### Data Binding Behavior
+## Data Binding Behavior
 - In Angular, the concept of Binding refers to the live connection established between a model or function in the Component Class and an element or DOM object in the template.
 
 ### Types of Data Binding
@@ -132,6 +132,8 @@
 
 ---
 
+Here's your text translated into English without changing the format:
+
 ### What is a Pipe?
 - A structure specific to Angular used to change the way data is displayed.
 - Built-in pipes:
@@ -157,3 +159,17 @@
 - Angular Component Communication is a concept that refers to the processes of sharing data and events between Angular components.
 - Parent to Child Communication - The method used to send data from a parent component to a child component. Here, the input method is used.
 - Child to Parent Communication - The method used to send data from a child component to a parent component. Here, the output method is used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+qwe
