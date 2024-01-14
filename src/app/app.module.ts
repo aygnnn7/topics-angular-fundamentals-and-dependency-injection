@@ -15,6 +15,7 @@ import { ChildComponent as ChildComponent2 } from './components/child_to_parent_
 import { ParentComponent as ParentComponent2} from './components/child_to_parent__communication/parent/parent.component';
 import { CompAComponent } from './components/child_to_child_communication/comp-a/comp-a.component';
 import { CompBComponent } from './components/child_to_child_communication/comp-b/comp-b.component';
+import { ExampleComponent } from './components/example/example.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CompBComponent } from './components/child_to_child_communication/comp-b
     ChildComponent2,
     ParentComponent2,
     CompAComponent,
-    CompBComponent
+    CompBComponent,
+    ExampleComponent
   ],
   imports: [
     BrowserModule,

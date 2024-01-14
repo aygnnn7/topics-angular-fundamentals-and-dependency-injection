@@ -4,12 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
 
   template: `
-    <app-parent></app-parent>
-    <hr>
-    <app-parent2></app-parent2>
-    <hr>
-    <app-comp-a (data)="childData($event)"></app-comp-a>
-    <app-comp-b [data]="childAtoBMessage"><app-comp-b> 
+    <app-example data="Hello">Example-Component-Content</app-example>
     
 
     <!-- Data Bindings
@@ -81,6 +76,15 @@ import { Component } from '@angular/core';
    {{name | slice : 1 : 4}}
     <hr>
     {{"dummy text" | custom : 0 : 5}}
+
+    Component Communication 
+    <app-parent></app-parent>
+    <hr>
+    <app-parent2></app-parent2>
+    <hr>
+    <app-comp-a (data)="childData($event)"></app-comp-a>
+    <app-comp-b [data]="childAtoBMessage"><app-comp-b> 
+    
   -->
     
     

@@ -160,16 +160,16 @@ Here's your text translated into English without changing the format:
 - Parent to Child Communication - The method used to send data from a parent component to a child component. Here, the input method is used.
 - Child to Parent Communication - The method used to send data from a child component to a parent component. Here, the output method is used.
 
-
-
-
-
-
-
-
-
-
-
-
-
-qwe
+### Component Life Cycle Hook
+- Bir angular componentinin olsuturudugu andan itibaren silindigi/imha edildigi ana kadar surecteki belirli noktalarda calistirilmasi icin tasarlanmis olan davranissal metotlari ifade etmektedir. Bir componentin yasam surecinde uygun noktalardaki tepkilerini/reflekslerini ifade eden bir kavramdir.
+- Bu metotlar; uygulamanin kullanimi surecinde, component'in veri guncellemesi, DOM ile etkilesime girmesi veyahut takip edlien verilerdeki degisimler gibi gorevleri yerine getirmenize yardimci olabilirler.
+- General order of the methods/events:
+  1. constructor: Initially, the constructor is triggered programmatically.
+  2. ngOnChanges: This is triggered when the component's Input variables change via selector reference.
+  3. ngOnInit: Triggered when the component is first created.
+  4. ngDoCheck: Often triggers this method when the component is updated. It works in the change detection cycle.
+  5. ngAfterContentInit: Triggered when the content of the component is created for the first time.
+  6. ngAfterContentChecked: Triggered when the content of the component is updated.
+  7. ngAfterViewInit: Triggered when the component's view/template is first created.
+  8. ngAfterViewChecked: Triggered when the component's view/template is updated.
+  9. ngOnDestroy: Triggered when the component is being removed or destroyed.
