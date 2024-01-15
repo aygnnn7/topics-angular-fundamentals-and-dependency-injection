@@ -1,13 +1,14 @@
 
-# Angular Building Blocks - My Notes
----
-## Angular's Working Principle
+# Angular - My Notes
+
+## Angular Fundamentals
+### Angular's Working Principle
 - Based on the MVC pattern.
   - **Controller**: `app.component.ts`
   - **Model**: `person.ts`
   - **View**: `app.component.html`
 
-## Basic Angular Building Blocks:
+### Basic Angular Building Blocks:
 - Modules
 - Components
 - Data Binding
@@ -65,9 +66,7 @@
 - Process data during display.
 - Convert data into different formats like date or currency.
 
----
-
-## Components
+### Components
 - Pages presenting content to users.
 - Each component is independent in functionality and appearance.
 - Maintenance is modular and segmented.
@@ -84,7 +83,7 @@
 
 ---
 
-## Data Binding Behavior
+### Data Binding Behavior
 - In Angular, the concept of Binding refers to the live connection established between a model or function in the Component Class and an element or DOM object in the template.
 
 ### Types of Data Binding
@@ -155,12 +154,13 @@ Here's your text translated into English without changing the format:
 - The 'transform' function's value parameter gives us the value we are working on, while args provide us the parameters we are working with. Alternatively, we can define parameters ourselves like a:number, b:string.
 
 --- 
-### What is Angular Component Communication?
+
+## What is Angular Component Communication?
 - Angular Component Communication is a concept that refers to the processes of sharing data and events between Angular components.
 - Parent to Child Communication - The method used to send data from a parent component to a child component. Here, the input method is used.
 - Child to Parent Communication - The method used to send data from a child component to a parent component. Here, the output method is used.
 
-### Component Life Cycle Hook
+## Component Life Cycle Hook
 - Bir angular componentinin olsuturudugu andan itibaren silindigi/imha edildigi ana kadar surecteki belirli noktalarda calistirilmasi icin tasarlanmis olan davranissal metotlari ifade etmektedir. Bir componentin yasam surecinde uygun noktalardaki tepkilerini/reflekslerini ifade eden bir kavramdir.
 - Bu metotlar; uygulamanin kullanimi surecinde, component'in veri guncellemesi, DOM ile etkilesime girmesi veyahut takip edlien verilerdeki degisimler gibi gorevleri yerine getirmenize yardimci olabilirler.
 - General order of the methods/events:
@@ -173,3 +173,21 @@ Here's your text translated into English without changing the format:
   7. ngAfterViewInit: Triggered when the component's view/template is first created.
   8. ngAfterViewChecked: Triggered when the component's view/template is updated.
   9. ngOnDestroy: Triggered when the component is being removed or destroyed.
+
+## Angular Forms - Consepts & Approaches
+- Form yapilanmasi kullaniclardan veri alabilmek yahut etkilesime girebilmek icin kullanilan yapilardir.
+- Template-Driven Forms ve Model-Driven/Reactive Forms olamk uzere iki yaklasimla kullanilabilmektedirler.  
+- Template-Driven Form: 
+  - Angular Forms yapisini olusturmanin kolay yoludur.
+  - Form elemenlarinin her birini 'ngModel' direktifi ile isaretleyerek calisma sergilemektedir.
+  - Formun tasarimini ve yapilanidrmasini tamamen template uzerinden gerceklestirir.
+- Model-Driven/Reactive Form:
+  - Template-Driven Form'lara nazaran daha karmasik form islemleri icin uygun olan yaklasimdir.
+  - Bu yaklasimda formun temel mantigi component uzerinde bir nesne/object olarak tanimlanir ve bu nesne HTML'de ki ilgili form etiketlerine bind edilir.
+  - Bu yaklasimda form elemenlari ve bu form elemanlarindaki verilen degisiklik durumlari ilgili nesne tarafindan reaktif bir sekilde/dinamik olarak takip edilmektedir.
+- Angular Form Konseptleri:
+  - FormGroup: Bir form icerisinde bulunan bir grup kontrolu temsil eder. Icerisinde FormControl nesneleri barindirir.
+  - FormArray: Form icerisinde dinamik olarak olusturulan kontrolleri temsil eden dizisel nesnedir.
+  - FormControl: Form icerisinde bulunan, kullanicidan veri almamizi saglayacak olan tek bir kontrolu temsil eder.
+  - FormBuilder: FormGroup, FormControl ve FormArray nesnelerini olusturmamizi kolaylastiacak olan bir servistir. Icerisindeki hazir fonksiyonlar sayesinde formu hizlica uretebilmemizi ve konfigure etmemizi saglar. 
+  - FormGroup ile FormArray arasindaki en temek fark, FormGroup sabit bir form bolumunu temsil ederken, FormArray dinamik olarak yulenen form elemanlarni temsil eder.  
