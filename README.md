@@ -81,8 +81,6 @@
 - Defines how a component is configured, defined, and used.
 - Example: `@Component{}`
 
----
-
 ### Data Binding Behavior
 - In Angular, the concept of Binding refers to the live connection established between a model or function in the Component Class and an element or DOM object in the template.
 
@@ -93,8 +91,6 @@
 - **Two-Way Binding**: Enables instant updating of a field/property value in the Component Class when the value of a bound HTML object in the template changes, and vice versa.
 - **Attribute Binding**: Binds the attributes of HTML elements directly to values from the Component Class.
 - **Style and Class Binding**: Used for declaring CSS styles or classes for an HTML element.
-
----
 
 ### Interpolation Syntax
 - In Angular, using the `{{..}}` operator to utilize any field or property value from the Component Class in HTML is known as Text Interpolation, and this expression is referred to as Interpolation Syntax.
@@ -129,10 +125,6 @@
  - TemplateRef represents the template used by the directive. 
  - ViewContainerRef is a reference to the container that holds the content of a template in Angular. This container is used to dynamically add or remove HTML elements.
 
----
-
-Here's your text translated into English without changing the format:
-
 ### What is a Pipe?
 - A structure specific to Angular used to change the way data is displayed.
 - Built-in pipes:
@@ -152,8 +144,6 @@ Here's your text translated into English without changing the format:
 - A pipe must be declared with @Pipe and named using name: 'x'.
 - The 'transform' function in a pipe is the function that manipulates/transforms the value used by the pipe.
 - The 'transform' function's value parameter gives us the value we are working on, while args provide us the parameters we are working with. Alternatively, we can define parameters ourselves like a:number, b:string.
-
---- 
 
 ## What is Angular Component Communication?
 - Angular Component Communication is a concept that refers to the processes of sharing data and events between Angular components.
