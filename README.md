@@ -165,19 +165,22 @@
   9. ngOnDestroy: Triggered when the component is being removed or destroyed.
 
 ## Angular Forms - Consepts & Approaches
-- Form yapilanmasi kullaniclardan veri alabilmek yahut etkilesime girebilmek icin kullanilan yapilardir.
-- Template-Driven Forms ve Model-Driven/Reactive Forms olamk uzere iki yaklasimla kullanilabilmektedirler.  
-- Template-Driven Form: 
-  - Angular Forms yapisini olusturmanin kolay yoludur.
-  - Form elemenlarinin her birini 'ngModel' direktifi ile isaretleyerek calisma sergilemektedir.
-  - Formun tasarimini ve yapilanidrmasini tamamen template uzerinden gerceklestirir.
-- Model-Driven/Reactive Form:
-  - Template-Driven Form'lara nazaran daha karmasik form islemleri icin uygun olan yaklasimdir.
-  - Bu yaklasimda formun temel mantigi component uzerinde bir nesne/object olarak tanimlanir ve bu nesne HTML'de ki ilgili form etiketlerine bind edilir.
-  - Bu yaklasimda form elemenlari ve bu form elemanlarindaki verilen degisiklik durumlari ilgili nesne tarafindan reaktif bir sekilde/dinamik olarak takip edilmektedir.
-- Angular Form Konseptleri:
-  - FormGroup: Bir form icerisinde bulunan bir grup kontrolu temsil eder. Icerisinde FormControl nesneleri barindirir.
-  - FormArray: Form icerisinde dinamik olarak olusturulan kontrolleri temsil eden dizisel nesnedir.
-  - FormControl: Form icerisinde bulunan, kullanicidan veri almamizi saglayacak olan tek bir kontrolu temsil eder.
-  - FormBuilder: FormGroup, FormControl ve FormArray nesnelerini olusturmamizi kolaylastiacak olan bir servistir. Icerisindeki hazir fonksiyonlar sayesinde formu hizlica uretebilmemizi ve konfigure etmemizi saglar. 
-  - FormGroup ile FormArray arasindaki en temek fark, FormGroup sabit bir form bolumunu temsil ederken, FormArray dinamik olarak yulenen form elemanlarni temsil eder.  
+- Form structures are used to collect data from users or interact with them.
+- There are two approaches to using them: Template-Driven Forms and Model-Driven/Reactive Forms.
+
+### Template-Driven Form:
+  - A simpler way to create Angular Forms structure.
+  - Works by marking each form element with the 'ngModel' directive.
+  - The design and structure of the form are entirely carried out through the template.
+
+### Model-Driven/Reactive Form:
+  - A more suitable approach for complex form operations compared to Template-Driven Forms.
+  - In this approach, the basic logic of the form is defined as an object on the component and this object is bound to the corresponding form tags in HTML.
+  - In this approach, form elements and changes in these form elements are reactively/dynamically tracked by the related object.
+
+### Angular Form Concepts:
+  - **FormGroup**: Represents a group of controls within a form. Contains FormControl objects.
+  - **FormArray**: A sequential object representing dynamically created controls within a form.
+  - **FormControl**: Represents a single control within a form that allows us to collect data from the user.
+  - **FormBuilder**: A service that facilitates the creation of FormGroup, FormControl, and FormArray objects. With its ready-to-use functions, it allows us to quickly produce and configure the form.
+  - The primary difference between FormGroup and FormArray is that while FormGroup represents a fixed section of a form, FormArray represents dynamically loaded form elements.

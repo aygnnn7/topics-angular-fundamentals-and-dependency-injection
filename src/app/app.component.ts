@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
 
   template: `
-    <app-example data="Hello">Example-Component-Content</app-example>
+    <app-template-driven></app-template-driven>
+    
     
 
     <!-- Data Bindings
@@ -85,6 +86,8 @@ import { Component } from '@angular/core';
     <app-comp-a (data)="childData($event)"></app-comp-a>
     <app-comp-b [data]="childAtoBMessage"><app-comp-b> 
     
+    Component Life Cycle Hook
+    <app-example data="Hello">Example-Component-Content</app-example>
   -->
     
     

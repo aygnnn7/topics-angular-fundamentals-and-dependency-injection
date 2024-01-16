@@ -16,6 +16,7 @@ import { ParentComponent as ParentComponent2} from './components/child_to_parent
 import { CompAComponent } from './components/child_to_child_communication/comp-a/comp-a.component';
 import { CompBComponent } from './components/child_to_child_communication/comp-b/comp-b.component';
 import { ExampleComponent } from './components/example/example.component';
+import { TemplateDrivenComponent } from './components/template-driven/template-driven.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ExampleComponent } from './components/example/example.component';
     ParentComponent2,
     CompAComponent,
     CompBComponent,
-    ExampleComponent
+    ExampleComponent,
+    TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,
