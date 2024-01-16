@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-
+  
   template: `
-    <app-template-driven></app-template-driven>
-    
-    
+
+    <app-model-driven></app-model-driven>
 
     <!-- Data Bindings
     Text Interpolation
@@ -88,6 +87,10 @@ import { Component } from '@angular/core';
     
     Component Life Cycle Hook
     <app-example data="Hello">Example-Component-Content</app-example>
+
+    Template-Driven Form
+    <app-template-driven></app-template-driven>
+    
   -->
     
     

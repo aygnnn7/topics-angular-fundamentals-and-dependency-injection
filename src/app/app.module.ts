@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExampleDirective } from './directives/example.directive';
 import { CustomifDirective } from './directives/customif.directive';
 import { CustomforDirective } from './directives/customfor.directive';
@@ -17,6 +17,7 @@ import { CompAComponent } from './components/child_to_child_communication/comp-a
 import { CompBComponent } from './components/child_to_child_communication/comp-b/comp-b.component';
 import { ExampleComponent } from './components/example/example.component';
 import { TemplateDrivenComponent } from './components/template-driven/template-driven.component';
+import { ModelDrivenComponent } from './components/model-driven/model-driven.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,14 @@ import { TemplateDrivenComponent } from './components/template-driven/template-d
     CompAComponent,
     CompBComponent,
     ExampleComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    ModelDrivenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
