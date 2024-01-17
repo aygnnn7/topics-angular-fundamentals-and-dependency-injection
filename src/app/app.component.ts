@@ -99,6 +99,7 @@ import { Component } from '@angular/core';
 
   styles: [".myclass{color:red;}"]
 })
+
 export class AppComponent {
   names: string[] = ["John", "Jack", "Isabelle", "Anna"];
   visible: boolean = false;

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +19,9 @@ import { TemplateDrivenComponent } from './components/template-driven/template-d
 import { ModelDrivenComponent } from './components/model-driven/model-driven.component';
 import { ProductService } from './productservice';
 import { DiExampleComponent } from './components/di-example/di-example.component';
+import { productServiceIT } from './injection-token';
+import{ HttpClient } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,21 @@ import { DiExampleComponent } from './components/di-example/di-example.component
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ProductService],
+  providers: [
+    // ProductService //DI Token - Deufalt Type Token
+    // {provide: ProductService, useClass: ProductService} //Type Token
+    // {provide: "productService", useClass: ProductService} //String Token
+    // {provide: productServiceIT, useClass: ProductService}, // Injection Token
+
+    // {provide: "example", useValue: "Hello String"},
+    // {provide: "func", useValue: () => {
+    //    return "Hello Function"
+    // }},
+    {provide: "productService", useFactory:  (httpClient: HttpClient) =>{
+      const obs = httpClient.get("https://jsonplaceholder.typicode.com/posts").subscribe({next:data => console.log(data)});
+      return new ProductService();
+    }, deps: [HttpClient]},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

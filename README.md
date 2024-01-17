@@ -256,3 +256,28 @@
 
 ### `@Injectable` Decorator
 - If you want to directly inject a class without adding it to the provider, you can mark the class with the `@Injectable` decorator and set the `providedIn` property to `root`.
+- Generally the services in Angular are marked with `@Injectable` decorator.
+
+
+### `providedIn` Parameter of `@Injectable`
+- `providedIn: 'root'`: This value ensures that the related service is added as a singleton to the application's main module. The service can be accessed from anywhere in the application and will be provided as a singleton.
+- `providedIn: 'any'`: This option provides the service in a way that allows multiple instances. It will generate a new instance for each module, leading to the creation of a new instance for every module.
+- `providedIn: 'platform'`: This value indicates that the services are specific to the platform. It is typically used in services designed for platform-independent applications like Universal.
+
+### Types of Providers
+- Class Provider: Used when a type/class is to be provided.
+- Value Provider: Used when we want to provide simple/textual values and functions.
+- Factory Provider: Used when configuring the service to be provided requires external configuration values, connection to an API due to different needs, or if the object to be provided should exhibit different behaviors under certain conditions. This need can be fulfilled using `useFactory`.
+- Aliased Class Provider: Used when we want to represent a provided service with a different reference. It essentially allows us to give an alias to the provided service.
+
+### `@Self` Decorator
+The `@Self` decorator instructs that the relevant dependency should only be sought in the current component or directive.
+
+### `SkipSelf` Decorator
+The `SkipSelf` decorator, on the other hand, instructs that the relevant dependency should be sought not in the component but in a parent component where it is called.
+
+### `Optional` Decorator
+Makes access to the relevant dependency optional.
+
+### View Providers
+The `viewProviders` property allows providing services to all child components and directives referenced in the template of the component where it is used.
