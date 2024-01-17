@@ -281,3 +281,16 @@ Makes access to the relevant dependency optional.
 
 ### View Providers
 The `viewProviders` property allows providing services to all child components and directives referenced in the template of the component where it is used.
+
+## What is a Service in Angular?
+- In Angular architecture, a service is essentially a class that performs a specific function/operation/responsibility.
+- We often use service structures to take on the business logic responsibilities in components.
+- The component will utilize the service to fulfill this responsibility, thereby freeing the components from handling business processes.
+- Services can be more effectively used and managed with the `@Injectable` decorator, alongside the dependency injection mechanism.
+- A service can be created using the command `ng g s services/example`.
+
+### Areas of Use:
+- Can be used while conducting business logic.
+- Can retrieve data from any external service or API.
+- Can maintain the general state of the application.
+- Can facilitate data communication between components.

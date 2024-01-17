@@ -17,11 +17,14 @@ import { CompBComponent } from './components/child_to_child_communication/comp-b
 import { ExampleComponent } from './components/example/example.component';
 import { TemplateDrivenComponent } from './components/template-driven/template-driven.component';
 import { ModelDrivenComponent } from './components/model-driven/model-driven.component';
-import { ProductService } from './productservice';
+import { ProductService } from './services/productservice';
 import { DiExampleComponent } from './components/di-example/di-example.component';
 import { productServiceIT } from './injection-token';
 import{ HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
+import { ServiceExampleComponent } from './components/service-example/service-example.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
+import { ReadUserComponent } from './components/read-user/read-user.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { firstValueFrom } from 'rxjs';
     ExampleComponent,
     TemplateDrivenComponent,
     ModelDrivenComponent,
-    DiExampleComponent
+    DiExampleComponent,
+    ServiceExampleComponent,
+    CreateUserComponent,
+    ReadUserComponent
   ],
   imports: [
     BrowserModule,
@@ -58,10 +64,10 @@ import { firstValueFrom } from 'rxjs';
     // {provide: "func", useValue: () => {
     //    return "Hello Function"
     // }},
-    {provide: "productService", useFactory:  (httpClient: HttpClient) =>{
-      const obs = httpClient.get("https://jsonplaceholder.typicode.com/posts").subscribe({next:data => console.log(data)});
-      return new ProductService();
-    }, deps: [HttpClient]},
+    // {provide: "productService", useFactory:  (httpClient: HttpClient) =>{
+    //   const obs = httpClient.get("https://jsonplaceholder.typicode.com/posts").subscribe({next:data => console.log(data)});
+    //   return new ProductService();
+    // }, deps: [HttpClient]},
   ],
   bootstrap: [AppComponent]
 })

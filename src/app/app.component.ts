@@ -4,9 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   
   template: `
-    <app-di-example> </app-di-example>
+    <app-service-example></app-service-example>
+    <app-create-user></app-create-user>
+    <app-read-user></app-read-user>
     
-
     <!-- Data Bindings
     Text Interpolation
     <h1>{{title}}</h1>
@@ -92,8 +93,11 @@ import { Component } from '@angular/core';
     <app-template-driven></app-template-driven>
     
     Form: Model-Driven Approach & State Changing & Validations
+    <app-model-driven></app-model-driven>
+
+    Dependency Injection
+    <app-di-example> </app-di-example>
   -->
-    
     
   `,
 
@@ -116,4 +120,7 @@ export class AppComponent {
   childData(message:string){
     this.childAtoBMessage=message;
   }
+
+
+
 }

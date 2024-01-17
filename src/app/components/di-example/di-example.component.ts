@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { productServiceIT } from 'src/app/injection-token';
-import { ProductService } from 'src/app/productservice';
+import { ProductService } from 'src/app/services/productservice';
 
 @Component({
   selector: 'app-di-example',
