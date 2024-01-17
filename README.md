@@ -164,7 +164,7 @@
   8. ngAfterViewChecked: Triggered when the component's view/template is updated.
   9. ngOnDestroy: Triggered when the component is being removed or destroyed.
 
-## Angular Forms - Consepts & Approaches
+## Forms - Consepts & Approaches
 - Form structures are used to collect data from users or interact with them.
 - There are two approaches to using them: Template-Driven Forms and Model-Driven/Reactive Forms.
 
@@ -184,3 +184,53 @@
   - **FormControl**: Represents a single control within a form that allows us to collect data from the user.
   - **FormBuilder**: A service that facilitates the creation of FormGroup, FormControl, and FormArray objects. With its ready-to-use functions, it allows us to quickly produce and configure the form.
   - The primary difference between FormGroup and FormArray is that while FormGroup represents a fixed section of a form, FormArray represents dynamically loaded form elements.
+
+
+## Forms - Changing the Status
+
+### What is Changing the Status?
+- The concept of changing the status refers to a set of functions in Angular that allow us to programmatically change the state of a form structure.
+- Through these functions, we can programmatically or via user interface change the status of a form and its controls, and generally update their state.
+
+### `markAsTouched` Function
+- This function changes the 'touched' property of a form or any control within it to true if any action is taken.
+- If you set the 'onlySelf' parameter to true in this function, it will only affect the 'touched' property of the structure in which it's used.
+**Example:**
+- `this.frm.get("name").markAsTouched()` -> `name control touched: true`
+
+### `markAllAsTouched` Function
+- Changes the touched value of all controls under a form group to true.
+
+### `markAsUntouched` Function
+- This function sets the touched property of the triggered form or form control to false. It is preferred for programmatic touches when indicating that the related structure has not been touched.
+
+### `markAsDirty` Function
+- This function allows us to programmatically change the 'dirty' value of the relevant form or form control.
+
+### `markAsPristine` Function
+- This function enables us to change the 'pristine' value of the relevant form or form control to true. Thus, it can appear as if the form has not been touched or worked on.
+
+### `disable & enable` Functions
+- `disable`: Deactivates the form/control where it is used.
+- `enable`: Activates the form/control where it is used.
+
+
+
+## Forms - Validations
+- In Angular architecture, there are two types of validators: sync validators and async validators.
+- Validators in Angular architecture are functions.
+
+### Built-in Validators
+- Within Angular's ReactiveForms module, there are a few ready-to-use built-in validators. These include: `min`, `max`, `required`, `requiredTrue`, `email`, `minlength`, and `maxlength`.
+**Usage example**: `name: ["", Validators.required]`
+
+### Obtaining Validation and Error Messages
+- In the validation processes of form structures, if there are errors, we need to provide users with short and meaningful messages about these errors.
+
+### Creating Custom Validators
+- For this, we can use the ValidatorFn interface.
+### Async Validator
+- This type of validator is generally used for processes that require data from an external service for validation, which are typically long-running.
+
+### Comparison Validators
+- Used when comparing values of two different controls. These validators are given to FormGroup rather than FormControl. This allows simultaneous access to two or more controls. Example applications: Password verification, start-end date compatibility, etc., where two control comparisons are needed.
