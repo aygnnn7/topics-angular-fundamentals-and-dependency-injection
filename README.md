@@ -234,3 +234,25 @@
 
 ### Comparison Validators
 - Used when comparing values of two different controls. These validators are given to FormGroup rather than FormControl. This allows simultaneous access to two or more controls. Example applications: Password verification, start-end date compatibility, etc., where two control comparisons are needed.
+
+## Dependency Injection
+- The dependency injection pattern is built-in.
+- In Angular, there are five actors for Dependency Injection: consumer, dependency, injection token (DI Token), provider, and injector.
+
+### Consumer:
+- The class that needs the dependency (e.g., Component, directive, service, etc.).
+
+### Dependency:
+- The service that is desired to be in the consumer.
+
+### Injection Token (DI Token):
+- A value that uniquely identifies dependencies.
+
+### Provider:
+- Where dependencies are stored along with the Injection Token (IoC Container).
+
+### Injector:
+- Structures that allow us to inject dependencies at the required points. They use the DI Token in the injection process.
+
+### `@Injectable` Decorator
+- If you want to directly inject a class without adding it to the provider, you can mark the class with the `@Injectable` decorator and set the `providedIn` property to `root`.

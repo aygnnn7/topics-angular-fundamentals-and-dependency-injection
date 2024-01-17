@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   
   template: `
-
-    <app-model-driven></app-model-driven>
+    <app-di-example> </app-di-example>
+    
 
     <!-- Data Bindings
     Text Interpolation
@@ -91,6 +91,7 @@ import { Component } from '@angular/core';
     Template-Driven Form
     <app-template-driven></app-template-driven>
     
+    Form: Model-Driven Approach & State Changing & Validations
   -->
     
     

@@ -18,6 +18,8 @@ import { CompBComponent } from './components/child_to_child_communication/comp-b
 import { ExampleComponent } from './components/example/example.component';
 import { TemplateDrivenComponent } from './components/template-driven/template-driven.component';
 import { ModelDrivenComponent } from './components/model-driven/model-driven.component';
+import { ProductService } from './productservice';
+import { DiExampleComponent } from './components/di-example/di-example.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { ModelDrivenComponent } from './components/model-driven/model-driven.com
     CompBComponent,
     ExampleComponent,
     TemplateDrivenComponent,
-    ModelDrivenComponent
+    ModelDrivenComponent,
+    DiExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { ModelDrivenComponent } from './components/model-driven/model-driven.com
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
